@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="cn.fyg.kq">
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="cn.fyg.kq">
   <process id="fyg-kq-kaoqin" name="考勤审批" isExecutable="true">
     <startEvent id="startevent1" name="Start" activiti:formKey="hr/leave/start"></startEvent>
     <userTask id="dm_check" name="部门经理审批" activiti:assignee="${done_user}" activiti:formKey="kaoqin/${businessId}/check"></userTask>
@@ -89,6 +89,9 @@
       <bpmndi:BPMNShape bpmnElement="staff_edit" id="BPMNShape_staff_edit">
         <omgdc:Bounds height="55.0" width="105.0" x="125.0" y="367.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="daytime" id="BPMNShape_daytime">
+        <omgdc:Bounds height="30.0" width="30.0" x="160.0" y="345.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="vp_check" id="BPMNShape_vp_check">
         <omgdc:Bounds height="55.0" width="105.0" x="760.0" y="367.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
@@ -96,7 +99,7 @@
         <omgdc:Bounds height="55.0" width="105.0" x="760.0" y="468.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="endevent1" id="BPMNShape_endevent1">
-        <omgdc:Bounds height="35.0" width="35.0" x="45.0" y="478.0"></omgdc:Bounds>
+        <omgdc:Bounds height="35.0" width="35.0" x="30.0" y="478.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="set_finish" id="BPMNShape_set_finish">
         <omgdc:Bounds height="55.0" width="105.0" x="290.0" y="468.0"></omgdc:Bounds>
@@ -104,8 +107,14 @@
       <bpmndi:BPMNShape bpmnElement="set_begin" id="BPMNShape_set_begin">
         <omgdc:Bounds height="55.0" width="105.0" x="290.0" y="367.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="unusual" id="BPMNShape_unusual">
+        <omgdc:Bounds height="55.0" width="105.0" x="122.0" y="203.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="exclusivegateway10" id="BPMNShape_exclusivegateway10">
         <omgdc:Bounds height="40.0" width="40.0" x="680.0" y="374.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="distribute" id="BPMNShape_distribute">
+        <omgdc:Bounds height="55.0" width="105.0" x="531.0" y="367.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="exclusivegateway11" id="BPMNShape_exclusivegateway11">
         <omgdc:Bounds height="40.0" width="40.0" x="452.0" y="374.0"></omgdc:Bounds>
@@ -116,22 +125,13 @@
       <bpmndi:BPMNShape bpmnElement="exclusivegateway12" id="BPMNShape_exclusivegateway12">
         <omgdc:Bounds height="40.0" width="40.0" x="1060.0" y="281.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="unusual" id="BPMNShape_unusual">
-        <omgdc:Bounds height="55.0" width="105.0" x="122.0" y="203.0"></omgdc:Bounds>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="distribute" id="BPMNShape_distribute">
-        <omgdc:Bounds height="55.0" width="105.0" x="531.0" y="367.0"></omgdc:Bounds>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="daytime" id="BPMNShape_daytime">
-        <omgdc:Bounds height="30.0" width="30.0" x="160.0" y="345.0"></omgdc:Bounds>
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge bpmnElement="flow1" id="BPMNEdge_flow1">
         <omgdi:waypoint x="83.0" y="394.0"></omgdi:waypoint>
         <omgdi:waypoint x="125.0" y="394.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow21" id="BPMNEdge_flow21">
         <omgdi:waypoint x="290.0" y="495.0"></omgdi:waypoint>
-        <omgdi:waypoint x="80.0" y="495.0"></omgdi:waypoint>
+        <omgdi:waypoint x="65.0" y="495.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow22" id="BPMNEdge_flow22">
         <omgdi:waypoint x="230.0" y="394.0"></omgdi:waypoint>
