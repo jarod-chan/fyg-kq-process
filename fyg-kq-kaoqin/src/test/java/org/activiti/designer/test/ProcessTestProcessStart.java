@@ -15,7 +15,7 @@ import org.junit.Test;
 
 public class ProcessTestProcessStart {
 
-	private String filename = "D:/eclipse4.3/workspace-activiti/fyg-kq-process/fyg-kq-kaoqin/src/main/resources/diagrams/processStart.bpmn";
+	private String filename = "D:/git-repository/fyg-kq-process/fyg-kq-kaoqin/src/main/resources/diagrams/processStart.bpmn";
 
 	@Rule
 	public ActivitiRule activitiRule = new ActivitiRule();
