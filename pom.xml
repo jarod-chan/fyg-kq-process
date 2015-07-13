@@ -72,5 +72,6 @@
 	 </build>
 	 <modules>
 	 	<module>fyg-kq-kaoqin</module>
+	 	<module>fyg-kq-qingjia</module>
 	 </modules>
 </project>
